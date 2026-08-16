@@ -29,6 +29,15 @@ client_secret*.json
 state/
 
 # ---------------------------------------------------------------------------
+# Internal working notes
+# ---------------------------------------------------------------------------
+# Engineering journal kept locally. Deliberately not shipped: it records
+# working context, environment-specific identifiers and decisions in progress,
+# none of which belong in a deliverable. The client-facing versions of that
+# content are README.md and the commit messages.
+CLAUDE.md
+
+# ---------------------------------------------------------------------------
 # Python
 # ---------------------------------------------------------------------------
 .venv/
