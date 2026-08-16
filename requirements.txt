@@ -1,0 +1,27 @@
+# TriageBot direct dependencies.
+# Pinned to the exact versions this project was built and tested against on
+# Python 3.11 (project requires Python 3.10+).
+#
+# Transitive dependencies (google-auth, httpx, anyio, ...) are intentionally
+# not listed here -- they are resolved by pip from the packages below.
+
+# OpenAI SDK. Needed for schema-enforced structured outputs; the SDK's parse
+# helpers are what turn a Pydantic model into a strict JSON schema and validate
+# the response back into typed Python objects.
+openai==3.1.0
+
+# Declares the response schema the model is forced to conform to. Ships as an
+# openai transitive dependency, but pinned explicitly because we import it.
+pydantic==2.13.4
+
+# Google Sheets client. Wraps the Sheets REST API and service-account auth;
+# appending a row is a single call instead of a hand-built request body.
+gspread==6.2.1
+
+# Telegram Bot API is a plain HTTPS POST to /sendMessage -- no bot framework
+# needed for a fire-and-forget notification.
+requests==2.34.2
+
+# Loads .env in local development so env vars behave the same locally and in
+# production. Never used to load real secrets into version control.
+python-dotenv==1.2.3
