@@ -1,0 +1,11 @@
+# Development-only dependencies. Not required to run TriageBot.
+#
+# Kept separate from requirements.txt so the runtime footprint the client
+# deploys stays at five packages.
+#
+#   pip install -r requirements.txt -r requirements-dev.txt
+
+# Test runner. The suite under tests/ is entirely offline: it uses fakes for
+# OpenAI, Sheets and Telegram, so it needs no credentials and spends nothing.
+# That means the client can verify the deliverable before configuring anything.
+pytest==9.1.0

@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Marcus Bell",
+    "email": "m.bell@example.org",
+    "message": "We are a 200-seat company evaluating your Enterprise tier. Could you send pricing and arrange a demo next week?"
+  },
+  {
+    "name": "Sofia Lindqvist",
+    "email": "sofia@brightpath.example",
+    "message": "We're on the Starter plan and keep hitting the seat limit. What does it cost to move to Business, and can we upgrade mid-cycle?"
+  },
+  {
+    "name": "Dana Whitfield",
+    "email": "dana@northwind.example",
+    "message": "Our whole team is locked out since this morning's update. Login returns error 500 and we cannot access any dashboards. This is blocking about 40 people."
+  },
+  {
+    "name": "Kwame Mensah",
+    "email": "kwame@example.com",
+    "message": "The CSV export button does nothing in Firefox. No error, no download. Works in Chrome. I've cleared cache and tried a private window."
+  },
+  {
+    "name": "Priya Raman",
+    "email": "priya@example.net",
+    "message": "I was charged twice for March, invoice 8841 and 8842, same amount. Please refund the duplicate."
+  },
+  {
+    "name": "Hugo Martins",
+    "email": "hugo.martins@example.pt",
+    "message": "Could you resend the receipt for last month? Our finance team needs a VAT invoice with our company registration number on it."
+  },
+  {
+    "name": "Tom Okafor",
+    "email": "tom@example.com",
+    "message": "Do you have any internships for students this summer?"
+  },
+  {
+    "name": "Rina Ito",
+    "email": "rina@partner.example",
+    "message": "We run a consultancy with about 30 clients in your space and wondered whether you have a partner or referral programme."
+  },
+
+  {
+    "_comment": "EXACT duplicate of Dana above - must be suppressed",
+    "name": "Dana Whitfield",
+    "email": "dana@northwind.example",
+    "message": "Our whole team is locked out since this morning's update. Login returns error 500 and we cannot access any dashboards. This is blocking about 40 people."
+  },
+  {
+    "_comment": "Same as Priya but different name spelling, email case and whitespace - still a duplicate",
+    "name": "P. Raman",
+    "email": "PRIYA@Example.NET",
+    "message": "I was charged twice for March,   invoice 8841 and 8842,\nsame amount. Please refund the duplicate."
+  },
+
+  {
+    "_comment": "MALFORMED: email field missing entirely",
+    "name": "No Email",
+    "message": "I forgot to fill in my email address."
+  },
+  {
+    "_comment": "MALFORMED: email is not an address",
+    "name": "Bad Email",
+    "email": "not-an-email-address",
+    "message": "My email will not validate."
+  },
+  {
+    "_comment": "MALFORMED: message is blank",
+    "name": "Empty Message",
+    "email": "empty@example.com",
+    "message": "   "
+  },
+  {
+    "_comment": "MALFORMED: name is blank",
+    "name": "",
+    "email": "noname@example.com",
+    "message": "I did not give a name."
+  },
+
+  "this is a bare string, not an inquiry object",
+
+  {
+    "_comment": "EDGE: HTML and markdown metacharacters must not break Telegram formatting",
+    "name": "<script>alert('xss')</script> O'Brien & Sons",
+    "email": "obrien+tag@example.co.uk",
+    "message": "Our app crashed - please help. Costs went 5 < 10 & >20% of runs failed! See *urgent* [ticket](#4821)."
+  },
+  {
+    "_comment": "EDGE: non-Latin script and emoji must survive round-tripping",
+    "name": "Yuki Tanaka",
+    "email": "yuki@example.jp",
+    "message": "請求書が届きません。 The invoice never arrived. 😟 Could you resend it to this address?"
+  }
+]
