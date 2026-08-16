@@ -1,0 +1,63 @@
+# ---------------------------------------------------------------------------
+# SECRETS -- these must never be committed.
+# This file is created before any credential-bearing file exists.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# Google service-account keys (any name, any location).
+# NOTE: ignore the directory *contents*, not the directory itself -- git cannot
+# re-include a file whose parent directory is excluded, and we want the README
+# in this folder to stay tracked.
+credentials/*
+!credentials/README.md
+*.json
+!package.json
+!tests/**/*.json
+!data/**/*.json
+service-account*.json
+*-service-account.json
+client_secret*.json
+*credentials*.json
+*.pem
+*.key
+*.p12
+
+# Local dedupe ledger (contains customer emails / message hashes)
+*.state.json
+state/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Logs
+# ---------------------------------------------------------------------------
+*.log
+logs/
