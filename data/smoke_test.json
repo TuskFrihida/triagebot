@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Dana Whitfield",
+    "email": "dana@northwind.example",
+    "message": "Our whole team is locked out since this morning's update. Login returns error 500 and we cannot access any dashboards. This is blocking about 40 people."
+  },
+  {
+    "name": "Dana Whitfield",
+    "email": "dana@northwind.example",
+    "message": "Our whole team is locked out since this morning's update. Login returns error 500 and we cannot access any dashboards. This is blocking about 40 people."
+  },
+  {
+    "name": "Broken Submission",
+    "email": "not-an-email-address",
+    "message": "This should be rejected without crashing the run."
+  },
+  {
+    "name": "Marcus Bell",
+    "email": "m.bell@example.org",
+    "message": "We are a 200-seat company evaluating your Enterprise tier. Could you send pricing and arrange a demo next week?"
+  }
+]
